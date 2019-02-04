@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var c =parseFloat(document.getElementById("c").value);
+
+var f =parseFloat(document.getElementById("f").value);
+
+
+var g =parseFloat(document.getElementById("g").value);
+
+var gp =parseFloat(document.getElementById("gp").value);
+
+
+if(c<0 || f<0 || g<0 || gp<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+
+var cost = (g*gp)/(f-c);
+var total = g*gp;
+
+document.getElementById('cost').value = cost;
+document.getElementById('total').value = total;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Current reading(in kilometer) =</td>
+  
+    </td>
+	            <td><input id="c" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Final reading(in kilometer) =</td>
+    <td><input id="f" type="number" onchange="calculate()";/></td>
+	</tr>
+
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Gas consumed(in liter or in kilogram) =</td>
+    <td><input id="g" type="number" onchange="calculate()";/></td>
+	
+
+</tr>
+
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Gas Price(Rupees per liter or kilogram) = </td>
+    <td><input id="gp" type="number" onchange="calculate()";/></td>
+	
+
+</tr>
+
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right"> Mileage(Rupees/kilometer) =</td>
+    <td><input id="cost" type="number" ;/></td>
+   
+</tr>
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right"> Total cost(in rupees) =</td>
+    <td><input id="total" type="number" ;/></td>
+   
+</tr>
+
+
+
+</table>
+</body>
+</html>

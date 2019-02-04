@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var f =parseFloat(document.getElementById("f").value);
+var dm =parseFloat(document.getElementById("dm").value);
+var dc =parseFloat(document.getElementById("dc").value);
+
+var l =parseFloat(document.getElementById("l").value);
+var cft =parseFloat(document.getElementById("cft").value);
+var cfc =parseFloat(document.getElementById("cfc").value);
+
+
+
+
+if(f<0 || dm<0 || dc<0 || l<0 || cft<0 || cfc<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+
+var trl = ((f*dm)/2)*((l+(3.14159*cft*dm))/((3.14159*dm)-(cft*l))) + ((f*cfc*dc)/2);
+var ttl = ((f*dm)/2)*((-l+(3.14159*cft*dm))/((3.14159*dm)+(cft*l))) + ((f*cfc*dc)/2);
+
+
+document.getElementById('trl').value =(trl/1000);
+document.getElementById('ttl').value = (ttl/1000);	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Load(force) =</td>
+  
+    </td>
+	            <td><input id="f" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Mean diameter(dm)(in mm) =</td>
+    <td><input id="dm" type="number" onchange="calculate()";/></td>
+	</tr>
+
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">mean collar diameter =</td>
+    <td><input id="dc" type="number" onchange="calculate()";/></td>
+	
+
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Square thread pitch distance =</td>
+  
+    </td>
+	            <td><input id="l" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Coefficient of friction for thread =</td>
+    <td><input id="cft" type="number" onchange="calculate()";/></td>
+	</tr>
+
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Coefficient of friction for collar =</td>
+    <td><input id="cfc" type="number" onchange="calculate()";/></td>
+	
+
+</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Torque(To raise load) =</td>
+    <td><input id="trl" type="number" ;/></td>
+   
+</tr>
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Torque(To lower load) =</td>
+    <td><input id="ttl" type="number" ;/></td>
+   
+</tr>
+
+
+
+
+</table>
+</body>
+</html>

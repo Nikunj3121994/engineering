@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var m =parseFloat(document.getElementById("m").value);
+var f =parseFloat(document.getElementById("f").value);
+var o =parseFloat(document.getElementById("o").value);
+
+
+
+
+
+if(o<0 || f<0 || m<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var c = (f/o);
+var d = 1- c;
+var b = d*m;
+document.getElementById('b').value = b;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Object Weight(in Newton) = </td>
+  
+    </td>
+	            <td><input id="m" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Surrounding fluid density(in kg/m3) = </td>
+  
+    </td>
+	            <td><input id="f" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Object density(in kg/m3) = </td>
+  
+    </td>
+	            <td><input id="o" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Bouyance force = </td>
+    <td><input id="b" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>

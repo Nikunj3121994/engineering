@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var v =parseFloat(document.getElementById("v").value);
+
+var q =parseFloat(document.getElementById("q").value);
+var i =parseFloat(document.getElementById("i").value);
+var t =parseFloat(document.getElementById("t").value);
+
+t = t/1000;
+
+
+
+if(v<0 || q<0 || i<0 || t<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var s = (v*q)/(i*t);
+document.getElementById('s').value = s;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Shear force(Nm) = </td>
+  
+    </td>
+	            <td><input id="v" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">First moment of inertia (in m3)= </td>
+  
+    </td>
+	            <td><input id="q" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Moment of inertia(m4)= </td>
+  
+    </td>
+	            <td><input id="i" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Thickness(mm)= </td>
+  
+    </td>
+	            <td><input id="t" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Bending stress(in N/m2)= </td>
+    <td><input id="s" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<div>
+<script>
+function calculate1()
+{
+
+var a =parseFloat(document.getElementById("a").value);
+
+var b =parseFloat(document.getElementById("b").value);
+
+var c =parseFloat(document.getElementById("c").value);
+
+var d =parseFloat(document.getElementById("d").value);
+
+var e =parseFloat(document.getElementById("e").value);
+
+var f =parseFloat(document.getElementById("f").value);
+
+
+if(a<0 || b<0 || c<0 || d<0 || e<0 || f<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var h = (a)/(3.14159*b*c*d);
+var i = -0.5*e*e/(f*f);
+var j = Math.pow(2.71828,i);
+
+var x = h*j;
+
+document.getElementById('x').value =x;
+
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Emmission rate =</td>
+  
+    </td>
+	            <td><input id="a" type="number" onchange="calculate1()" ;autofocus /></td>
+</tr>
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Average wind speed =</td>
+    <td><input id="b" type="number" onchange="calculate1()";/></td>
+	</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Horizontal depression of emmission = </td>
+    <td><input id="c" type="number" onchange="calculate1()";/></td>
+   
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Vertical depression of emmission =</td>
+  
+    </td>
+	            <td><input id="d" type="number" onchange="calculate1()" ;autofocus /></td>
+</tr>
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Effective stack height =</td>
+    <td><input id="e" type="number" onchange="calculate1()";/></td>
+	</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Vertic depression of emmission =</td>
+    <td><input id="f" type="number" onchange="calculate1()";/></td>
+   
+</tr>
+
+
+
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Maximum ground level concentration =</td>
+    <td><input id="x" type="number" ;/></td>
+	
+
+</tr>
+
+
+
+
+
+</table>
+</body>
+</html>
+</div>

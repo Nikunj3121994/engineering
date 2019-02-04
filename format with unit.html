@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+var inputa = parseFloat(document.getElementById("inputa").value);
+var inputb = parseFloat(document.getElementById("inputb").value);
+var inputc = parseFloat(document.getElementById("inputc").value);
+
+if(inputa<0 ||inputb<0 ||inputc<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value....";
+}
+if(inputa>=0 && inputb>=0 && inputc>=0){
+document.getElementById("warning").innerHTML = "";
+}
+
+
+
+for(var i=0;i<unitinputa.options.length;i++)
+    {
+	  if(unitinputa.options[i].selected) unitinputida = i;
+	}
+	
+for(var i=0;i<unitinputb.options.length;i++)
+    {
+	  if(unitinputb.options[i].selected) unitinputidb = i;
+	}
+
+	for(var i=0;i<unitinputc.options.length;i++)
+    {
+	  if(unitinputc.options[i].selected) unitinputidc = i;
+	}
+
+	
+for(var j=0;j<unitoutputx.options.length;j++)
+    {
+	  if(unitoutputx.options[j].selected) unitoutputidx = j;
+	}
+
+for(var j=0;j<unitoutputy.options.length;j++)
+    {
+	  if(unitoutputy.options[j].selected) unitoutputidy = j;
+	}
+for(var j=0;j<unitoutputz.options.length;j++)
+    {
+	  if(unitoutputz.options[j].selected) unitoutputidz = j;
+	}
+	
+var scalea = [1,57.295779513,0.9,0.0166666667,2.777777777E-4,360,90,60];
+var scaleb = [1,57.295779513,0.9,0.0166666667,2.777777777E-4,360,90,60];
+var scalec = [1,57.295779513,0.9,0.0166666667,2.777777777E-4,360,90,60];
+
+
+var scalex = [1,57.295779513,0.9,0.0166666667,2.777777777E-4,360,90,60];
+var scaley = [1,57.295779513,0.9,0.0166666667,2.777777777E-4,360,90,60];
+var scalez = [1,57.295779513,0.9,0.0166666667,2.777777777E-4,360,90,60];
+
+
+
+var multiplya = scalea[unitinputida];
+var multiplyb = scaleb[unitinputidb];
+var multiplyc = scalec[unitinputidc];
+
+var dividex = scalex[unitoutputidx];
+var dividey = scaley[unitoutputidy];
+var dividez = scalez[unitoutputidz];
+
+var outputx = inputa;
+var outputy = inputb;
+var outputz = inputc;
+
+
+
+document.getElementById('outputx').value =outputx;
+document.getElementById('outputy').value =outputy;
+document.getElementById('outputz').value =outputz;
+
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:200px;
+}
+select,form,option{
+width:150px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="inputa" id="unitinputtablea" value="10">
+    <form>
+                  <select name="unitinputa" id="unitinputa" onchange="calculate()">
+				  
+				          <option value="1">Unit A1</option>
+                          <option value="2">Unit A2</option>
+                          <option value="3">Unit A3</option>
+						  
+						  
+                  </select>
+  
+        </form>
+  
+    </td>
+	            <td><input id="inputa" type="number" value="0" onkeyup="calculate()";autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="inputb" id="unitinputtableb" value="10">
+    <form>
+                  <select name="unitinputb" id="unitinputb" onchange="calculate()">
+				  
+				          <option value="1">Unit B1</option>
+                          <option value="2">Unit B2</option>
+                          <option value="3">Unit B3</option>
+						  
+						  
+                  </select>
+  
+        </form>
+  
+    </td>
+	            <td><input id="inputb" type="number" value="0" onkeyup="calculate()";autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="inputc" id="unitinputtablec" value="10">
+    <form>
+                  <select name="unitinputc" id="unitinputc" onchange="calculate()">
+				  
+				          <option value="1">Unit C1</option>
+                          <option value="2">Unit C2</option>
+                          <option value="3">Unit C3</option>
+						  
+						  
+                  </select>
+  
+        </form>
+  
+    </td>
+	            <td><input id="inputc" type="number" value="0" onkeyup="calculate()";autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="outputx" id="unitoutputtablex">
+    <form>
+         <select name="length output" id="unitoutputx" onchange="calculate()">
+                          
+				          <option value="1">Unit X1</option>
+                          <option value="2">Unit X2</option>
+                          <option value="3">Unit X3</option>
+						  
+          </select>
+    </form>
+ </td>
+    
+    <td><input id="outputx" type="number" value="0";autofocus/></td>
+</tr>
+
+<tr>
+   <td align="right" class="outputy" id="unitoutputtabley">
+    <form>
+         <select name="length output" id="unitoutputy" onchange="calculate()">
+                          
+				          <option value="1">Unit Y1</option>
+                          <option value="2">Unit Y2</option>
+                          <option value="3">Unit Y3</option>
+						  
+          </select>
+    </form>
+ </td>
+    
+    <td><input id="outputy" type="number" value="0";autofocus/></td>
+</tr>
+
+<tr>
+   <td align="right" class="outputz" id="unitoutputtablez">
+    <form>
+         <select name="length output" id="unitoutputz" onchange="calculate()">
+                          
+				          <option value="1">Unit Z1</option>
+                          <option value="2">Unit Z2</option>
+                          <option value="3">Unit Z3</option>
+						  
+          </select>
+    </form>
+ </td>
+    
+    <td><input id="outputz" type="number" value="0";autofocus/></td>
+</tr>
+
+
+</table>
+</body>
+</html>

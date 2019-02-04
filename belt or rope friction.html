@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var th =parseFloat(document.getElementById("th").value);
+var u =parseFloat(document.getElementById("u").value);
+var f =parseFloat(document.getElementById("f").value);
+
+
+
+
+
+if(th<0 || u<0 || f<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var b = u*f;
+var c = Math.pow(2.71828,b);
+var d = th*c;
+document.getElementById('b').value = d;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Holding torque(in newton) = </td>
+  
+    </td>
+	            <td><input id="th" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Coefficient of friction between rope = </td>
+  
+    </td>
+	            <td><input id="u" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Total rope angle(in radian)= </td>
+  
+    </td>
+	            <td><input id="f" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Belt load(in newton) = </td>
+    <td><input id="b" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>

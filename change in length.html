@@ -1,0 +1,98 @@
+<div>
+<script>
+function calculate1()
+{
+
+var a =parseFloat(document.getElementById("a").value);
+
+var b =parseFloat(document.getElementById("b").value);
+
+var c =parseFloat(document.getElementById("c").value);
+
+
+
+
+if(a<0 || b<0 || c<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+
+var x = a*b*c;
+
+
+document.getElementById('x').value =x;
+
+
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Linear thermal expansion coefficient(1/kelvin) =</td>
+  
+    </td>
+	            <td><input id="a" type="number" onchange="calculate1()" ;autofocus /></td>
+</tr>
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Change in temperature =</td>
+    <td><input id="b" type="number" onchange="calculate1()";/></td>
+	</tr>
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Initial length(in mm)= </td>
+    <td><input id="c" type="number" onchange="calculate1()";/></td>
+   
+</tr>
+
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Change in length(in mm)=</td>
+    <td><input id="x" type="number" ;/></td>
+	
+
+</tr>
+
+
+
+
+
+</table>
+</body>
+</html>
+</div>

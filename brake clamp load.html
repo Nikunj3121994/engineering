@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var t =parseFloat(document.getElementById("t").value);
+
+var r =parseFloat(document.getElementById("r").value);
+r = r / 1000;
+var f =parseFloat(document.getElementById("f").value);
+var n =parseFloat(document.getElementById("n").value);
+
+
+
+
+if(t<0 || r<0 || f<0 || n<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var c = t/(r*f*n);
+document.getElementById('c').value = c;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Brake torque(Nm) = </td>
+  
+    </td>
+	            <td><input id="t" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Effective radius(in mm)= </td>
+  
+    </td>
+	            <td><input id="r" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Coefficient of friction= </td>
+  
+    </td>
+	            <td><input id="f" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Number of friction face= </td>
+  
+    </td>
+	            <td><input id="n" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Bending clamp load(N) = </td>
+    <td><input id="c" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>

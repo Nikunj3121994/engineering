@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var f =parseFloat(document.getElementById("f").value);
+var l =parseFloat(document.getElementById("l").value);
+var t =parseFloat(document.getElementById("t").value);
+
+
+
+
+if(f<0 || l<0 || t<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var n = (f*l)/(2*3.1459*t)/1000;
+
+document.getElementById('n').value = n*100;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Force = </td>
+  
+    </td>
+	            <td><input id="f" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">length(in mm) = </td>
+  
+    </td>
+	            <td><input id="l" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Torque = </td>
+  
+    </td>
+	            <td><input id="t" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Power screw efficiency =</td>
+    <td><input id="n" type="number" ;/></td>
+   
+</tr>
+
+
+
+
+
+</table>
+</body>
+</html>

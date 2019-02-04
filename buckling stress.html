@@ -1,0 +1,97 @@
+<div>
+<script>
+function calculate1()
+{
+
+var a =parseFloat(document.getElementById("a").value);
+
+var b =parseFloat(document.getElementById("b").value);
+
+var c =parseFloat(document.getElementById("c").value);
+
+
+
+
+if(a<0 || b<0 || c<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+
+var x = 3.14159*3.14159*a*b*b/(c*c);
+
+
+document.getElementById('x').value =x;
+
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Young Modulus(in N/m2)= </td>
+  
+    </td>
+	            <td><input id="a" type="number" onchange="calculate1()" ;autofocus /></td>
+</tr>
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Radius of column (in mm)= </td>
+    <td><input id="b" type="number" onchange="calculate1()";/></td>
+	</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Unsupported length(l)(in mm)= </td>
+    <td><input id="c" type="number" onchange="calculate1()";/></td>
+   
+</tr>
+
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Critical Buckling stress(in N/m2) =</td>
+    <td><input id="x" type="number" ;/></td>
+	
+
+</tr>
+
+
+
+
+</table>
+</body>
+</html>
+</div>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var a =parseFloat(document.getElementById("a").value);
+var d =parseFloat(document.getElementById("d").value);
+var m =parseFloat(document.getElementById("m").value);
+
+
+
+
+
+if(a<0 || d<0 || m<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var c= Math.pow(d,m)
+var sut = a/c
+document.getElementById('sut').value = sut;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Minimum tensile strength(in N/m2) = </td>
+  
+    </td>
+	            <td><input id="a" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Diameter(in mm) = </td>
+  
+    </td>
+	            <td><input id="d" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Exponent(m) = </td>
+  
+    </td>
+	            <td><input id="m" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Minimum tensile strength(in kpsi) = </td>
+    <td><input id="sut" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>

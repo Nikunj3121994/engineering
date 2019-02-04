@@ -1,0 +1,88 @@
+<div>
+<script>
+function calculate1()
+{
+
+var a =parseFloat(document.getElementById("a").value);
+
+var b =parseFloat(document.getElementById("b").value);
+
+
+
+
+
+if(a<0 || b<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var c = (a)/(a+b);
+
+var x = 100 *c;
+
+document.getElementById('x').value =x;
+
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">CO2 - Dry column concentration of CO2 (ppmv) = </td>
+  
+    </td>
+	            <td><input id="a" type="number" onchange="calculate1()" ;autofocus /></td>
+</tr>
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">CO - Dry column concentration of CO (ppmv) =</td>
+    <td><input id="b" type="number" onchange="calculate1()";/></td>
+	</tr>
+
+
+
+
+<tr>
+   <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Combustion efficiency(CE) =</td>
+    <td><input id="x" type="number" ;/></td>
+	
+
+</tr>
+
+
+
+
+</table>
+</body>
+</html>
+</div>

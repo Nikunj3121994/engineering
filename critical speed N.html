@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var dr =parseFloat(document.getElementById("dr").value);
+var c =parseFloat(document.getElementById("c").value);
+var l =parseFloat(document.getElementById("l").value);
+
+
+
+
+
+if(dr<0 || c<0 || l<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var n = (4.76*1000*1000)*dr*c/(l*l);
+
+document.getElementById('n').value = n;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">diameter lead screw(mm) = </td>
+  
+    </td>
+	            <td><input id="dr" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">length between bearing and support = </td>
+  
+    </td>
+	            <td><input id="l" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Constant = </td>
+  
+    </td>
+	            <td><input id="c" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Critical speed(N) = </td>
+    <td><input id="n" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>

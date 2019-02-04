@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var a =parseFloat(document.getElementById("a").value);
+
+var b =parseFloat(document.getElementById("b").value);
+
+var c =parseFloat(document.getElementById("c").value);
+
+var d = (a*c)/b;
+
+document.getElementById('d').value = d;
+
+	
+}
+
+
+</script>
+<style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:100px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right">Initial Volume</td>
+   <td><input id="a" type="number" onchange="calculate()"  ;autofocus /></td>
+  
+   <td align="right"> Initial Mole fraction </td>
+   <td><input id="b" type="number" onchange="calculate()";/></td>
+
+      <td align="right">Final mole fraction </td>
+   <td><input id="c" type="number" onchange="calculate()"  ;autofocus /></td>
+
+   </table>
+   <table border="0" align="center" id="table">
+   <td align="right">Final volume</td>
+   <td><input id="d" type="number" onchange="calculate()";/></td>
+  
+   </tr>
+</table>
+
+</tr>
+</table>
+</tr>
+</body>
+</html>

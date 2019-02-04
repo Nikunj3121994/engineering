@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var i =parseFloat(document.getElementById("i").value);
+var v =parseFloat(document.getElementById("v").value);
+
+
+
+
+if(i<0 || v<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var r = v/i;
+
+document.getElementById('r').value =r;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Current(I) = </td>
+  
+    </td>
+	            <td><input id="i" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Voltage(V) = </td>
+  
+    </td>
+	            <td><input id="v" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Electric Resistance(R) = </td>
+    <td><input id="r" type="number" ;/></td>
+   
+</tr>
+
+
+
+
+
+</table>
+</body>
+</html>

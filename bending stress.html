@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var m =parseFloat(document.getElementById("m").value);
+var m = m*1000;
+var y =parseFloat(document.getElementById("y").value);
+var i =parseFloat(document.getElementById("i").value);
+
+
+
+
+
+if(m<0 || y<0 || i<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var s = (m*y)/i;
+s = s*1000*1000;
+document.getElementById('s').value = s;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Moment of force(Nm) = </td>
+  
+    </td>
+	            <td><input id="m" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Perpendicular distance to neutral axis (in mm)= </td>
+  
+    </td>
+	            <td><input id="y" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Second moment of inertia(mm4)= </td>
+  
+    </td>
+	            <td><input id="i" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Bending stress(in N/m2)= </td>
+    <td><input id="s" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>

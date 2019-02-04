@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var f =parseFloat(document.getElementById("f").value);
+var d1 =parseFloat(document.getElementById("d1").value);
+var d2 =parseFloat(document.getElementById("d2").value);
+
+
+
+
+
+if(f<0 || d1<0 || d2<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var c = d1/d2;
+var ks =((2*c)+1)/(2*c) ;
+
+var t = ks*8*f*(d1)/(3.14159*d2*d2*d2) * 1000000;
+
+document.getElementById('t').value = t;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Force(newton) = </td>
+  
+    </td>
+	            <td><input id="f" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Big diameter(in mm) = </td>
+  
+    </td>
+	            <td><input id="d1" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Spring diameter(in mm) = </td>
+  
+    </td>
+	            <td><input id="d2" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Helical shear stress(in N/m2) = </td>
+    <td><input id="t" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>

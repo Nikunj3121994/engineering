@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var s =parseFloat(document.getElementById("s").value);
+var t =parseFloat(document.getElementById("t").value);
+var d =parseFloat(document.getElementById("d").value);
+
+
+
+
+
+if(s<0 || t<0 || d<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var p = (2*s*t)/d;
+document.getElementById('p').value = p;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Stress(In N/m2) = </td>
+  
+    </td>
+	            <td><input id="s" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Thicjness(mm) = </td>
+  
+    </td>
+	            <td><input id="t" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Outside diameter(mm)= </td>
+  
+    </td>
+	            <td><input id="d" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Pressure(in N/m2) = </td>
+    <td><input id="p" type="number" ;/></td>
+   
+</tr>
+</table>
+</body>
+</html>
