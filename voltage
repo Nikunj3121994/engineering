@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<script>
+function calculate()
+{
+
+var i =parseFloat(document.getElementById("i").value);
+var r =parseFloat(document.getElementById("r").value);
+
+
+
+
+if(i<0 || r<0){
+document.getElementById("warning").innerHTML = "Please enter a positive value.......";
+}else{
+document.getElementById("warning").innerHTML = "";
+
+}
+var v = i*r;
+
+document.getElementById('v').value =v;
+	
+}
+</script>
+<Style>
+td,p
+{
+    font-size:20px;
+	
+}
+
+input
+{
+    font-size:14pt;
+    width:150px;
+}
+select,form,option{
+width:100px;
+height:30px;
+size:30px;
+font-size:14pt;
+}
+</style>
+
+<p id="warning" align="center">
+
+</p>
+
+<table border="0" align="center" id="table">
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Current(I) = </td>
+  
+    </td>
+	            <td><input id="i" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+<tr>
+   <td align="right" class="principal" id="unitinputtable">
+    <td align="right">Electric resistance(R) = </td>
+  
+    </td>
+	            <td><input id="r" type="number" onchange="calculate()" ;autofocus /></td>
+</tr>
+
+
+<tr>
+ <td align="right" class="output" id="unitoutputtable">
+    
+ </td>
+    <td align="right">Voltage(V) = </td>
+    <td><input id="v" type="number" ;/></td>
+   
+</tr>
+
+
+
+
+
+</table>
+</body>
+</html>
+
+<p>
+    For more calculation about engineering, follow link given below:
+</p>
+<h1>Volume</h1>
+<table>
+  <tr>
+    <th>
+
+
+<input type="button" value="Air pollution" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/air-pollution/'" /></th><th>
+<input type="button" value="Avagodro" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/avagodro-equation/'" /></th><th>
+<input type="button" value="Avagodro" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/avagodro-equation2/'" /></th></tr><tr><th>
+<input type="button" value="Backlash" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/backlash/'" /></th><th>
+<input type="button" value="Barlow" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/barlow-formula/'" /></th><th>
+<input type="button" value="Battery life" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/battery-life/'" /></th></tr><tr><th>
+<input type="button" value="Belt friction" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/belt-friction/'" /></th><th>
+<input type="button" value="Bend allowance" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/bend-allowance/'" /></th><th>
+<input type="button" value="Bending stress" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/bending-stress/'" /></th></tr><tr><th>
+<input type="button" value="BOD" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/bod-extortion/'" /></th><th>
+<input type="button" value="Boyle equation" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/boyle-equation/'" /></th><th>
+<input type="button" value="Boyle equation" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/boyle-equation-2/'" /></th></tr><tr><th>
+<input type="button" value="Brake clamp load" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/brake-clamp-load/'" /></th><th>
+<input type="button" value="Buckling force" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/buckling-force-of-column/'" /></th><th>
+<input type="button" value="Buckling stress" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/buckling-stress/'" /></th></tr><tr><th>
+<input type="button" value="Bulk modulus" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/bulk-modulus/'" /></th><th>
+<input type="button" value="Buoyant force" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/buoyant-force/'" /></th><th>
+<input type="button" value="Byouyancy mass" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/byouyancy-mass/'" /></th></tr><tr><th>
+<input type="button" value="Capacitor" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/capacitor-charge/'" /></th><th>
+<input type="button" value="Change in length" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/change-in-length/'" /></th><th>
+<input type="button" value="Characteristic impedence" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/characteristic-impedence/'" /></th></tr><tr><th>
+<input type="button" value="Charles equation" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/charles-equation/'" /></th><th>
+<input type="button" value="Charles equation" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/charles-equation2/'" /></th><th>
+<input type="button" value="Combustion efficiency" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/combustion-efficiency/'" /></th></tr><tr><th>
+<input type="button" value="Compression ratio" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/compression-ratio/'" /></th><th>
+<input type="button" value="Critical speed" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/critical-speed/'" /></th><th>
+<input type="button" value="Critical speed" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/critical-speed-of-rotating-shaft/'" /></th></tr><tr><th>
+<input type="button" value="Current" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/current-calculator/'" /></th><th>
+<input type="button" value="Cyclon efficiency" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/cyclon-collection-efficiency/'" /></th><th>
+<input type="button" value="Cyclon effective-turns" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/cyclon-effective-turns/'" /></th></tr><tr><th>
+<input type="button" value="Cylinder stress" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/cylinder-stress/'" /></th><th>
+<input type="button" value="Darcy weischbach" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/darcy-weischbach/'" /></th><th>
+<input type="button" value="Density" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/density-of-material/'" /></th></tr><tr><th>
+<input type="button" value="DRE" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/destruction-and-removal-efficiency/'" /></th><th>
+<input type="button" value="Fuel cost" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/fuel-cost/'" /></th><th>
+<input type="button" value="Helical shear stress" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/helical-shear-stress/'" /></th></tr><tr><th>
+<input type="button" value="Shear stress" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/horizontal-shear-stress/'" /></th><th>
+<input type="button" value="Speed" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/horsepower-to-speed/'" /></th><th>
+<input type="button" value="Torque" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/horsepower-to-torque/'" /></th></tr><tr><th>
+<input type="button" value="LED" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/led-resistor/'" /></th><th>
+<input type="button" value="Microstrip impedence" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/microstrip-impedence/'" /></th><th>
+<input type="button" value="Period of oscillation" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/period-of-oscillation/'" /></th></tr><tr><th>
+<input type="button" value="Potential divider" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/potential-divider/'" /></th><th>
+<input type="button" value="Power screw-efficiency" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/power-screw-efficiency/'" /></th><th>
+<input type="button" value="Reactance" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/reactance/'" /></th></tr><tr><th>
+<input type="button" value="Reflection coefficient" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/reflection-coefficient/'" /></th><th>
+<input type="button" value="Resistance" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/resistance-calculator/'" /></th><th>
+<input type="button" value="RF power density" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/rf-power-density/'" /></th></tr><tr><th>
+<input type="button" value="Simple harmonic motion" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/simple-harmonic-motion/'" /></th><th>
+<input type="button" value="Sound pressure level" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/sound-pressure-level/'" /></th><th>
+<input type="button" value="Specific growth rate" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/specific-growth-rate/'" /></th></tr><tr><th>
+<input type="button" value="Spring" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/spring/'" /></th><th>
+<input type="button" value="Tensile strength" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/tensile-strength/'" /></th><th>
+<input type="button" value="Thermal expansion" onclick='http://www.calculation.net.in/engineeringcalculation/thermal-expansion/'" /></th></tr><tr><th>
+<input type="button" value="Torque requirement" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/torque-requirement/'" /></th><th>
+<input type="button" value="Torque requirement 2" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/torque-requirement-2/'" /></th><th>
+<input type="button" value="Voltage" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/voltage-calculator/'" /></th></tr><tr><th>
+<input type="button" value="Volume thermal expansion" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/volume-thermal-expansion/'" /></th><th>
+<input type="button" value="Wave amplitude" onclick="window.location.href='http://www.calculation.net.in/engineeringcalculation/wave-amplitude/'" /></th></tr></table>
